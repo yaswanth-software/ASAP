@@ -6,14 +6,14 @@ const app = express()
 const mongoose = require('mongoose');
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
-const mongoURI = 'mongodb://localhost:27017/your_database_name'; 
+const mongoURI = 'mongodb://localhost:2701'; 
 
 let dbConnected = false;
 
 
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoURI)
   .then(() => {
     console.log('MongoDB connected successfully!');
     dbConnected = true; 
